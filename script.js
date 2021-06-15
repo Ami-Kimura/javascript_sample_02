@@ -47,15 +47,16 @@ function Calc01() {
 
 // 総和を求めるプログラム
 function Calc02() {
-  var s = 0;
-  var xs = Number(XS.value);
-  var xe = Number(XE.value);
+  var ans = document.getElementById('ANS2'); // ターゲット要素
+  var xs = document.getElementById('XS'); // 入力１
+  var xe = document.getElementById('XE'); // 入力２
 
   // 変数 s に順次値を足し込む
-  for (var i = xs; i <= xe; i++) {
+  var s = 0;
+  for (var i = Number(xs.value); i <= Number(xe.value); i++) {
     s = s + i;
   }
-  ANS2.value = s;
+  ans.value = s;
 }
 
 
